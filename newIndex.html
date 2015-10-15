@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+
+<!--
+The <head> of a website generally links to important resources the page will
+need to load. You'll see a lot of <link>s to CSS files for styles and
+<scripts> for JavaScript files to build interactions.
+-->
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Emily's Resume Site</title>
+
+  <!-- Load the page styles. -->
+  <link href="css/styleNew.css" rel="stylesheet">
+
+
+  <script src="js/jQuery.js"></script>
+  <script src="js/jQueryHelper.js"></script>
+  <script src="js/helper.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+  <meta name="viewport" content="width=device-width">
+</head>
+
+
+<body>
+  <div id="main">
+   
+
+    <!--
+    Everything from here to the <script> tag below is the skeleton of your
+    website. Your code will add information to each of the sections of the
+    resume below. You can pretty easily figure out what each section will
+    display by looking at the id or at what's written between the <h2> tags.
+    -->
+    <div id="header" class="center-content clear-fix">
+      <ul id="topContacts" class="flex-box"></ul>
+    </div>
+
+    <div id='cssmenu'>
+    <ul>
+       <li class='active'><a href='#home'><span>Home</span></a></li>
+       <li><a href='#projects'><span>Projects</span></a></li>
+       <li><a href='#education'><span>Education</span></a></li>
+       <li><a href='#work'><span>Work</span></a></li>
+       <li class='last'><a href='#extras'><span>Extras</span></a></li>
+    </ul>
+    </div>
+   <div id="columns">
+    <div id="columnOne">
+      <h2>Recent Updates</h2>
+      <textboxLeft>
+        <h3>Summer In Seattle</h3>
+          Over the summer, I spent my vacation doing research at the Unviersity of Washington for the Computer Science department. This research opportunity was made possible through the DREU I was awarded. My mentor, Anat Caspi, had me working with on an inter-disciplinary, data-driven project that partnered with University of Washington's eScience Center's program called Data Science for Social Good. Our specific project aimed to improve efficiency for the paratransit program in King County. For more information, check out my <a href="http://emilydreu.weebly.com/">summer blog</a>.
+        </textboxLeft>
+        <img id="imageContent" src="images/DSSGpic.jpg" width=40% margin=25px>
+    <textboxRight> More text and text and askf e ndslte xte tes fBrie nad laksdfiv nke slei fdsn alsdkf inew li lsdf.</textboxRight>
+    </div>
+    <div id="columnTwo" style="height:">
+      <div id="mapContent">
+        <h1>name</h1>
+        <p> </p>
+        <img src=""></img>
+      </div>
+      <h2>Column Two</h2>
+      <textboxLeft>Paragraph text YEsdf ajkd lkdj i jksdfi nw idk i nskd i k sn fiifsdf k sldkf wi eknl isdnf k livan k.</textboxLeft>
+      <textboxRight> More text and text and askf e ndslte xte tes fBrie nad laksdfiv nke slei fdsn alsdkf inew li lsdf.</textboxRight>
+    </div>
+  </div>
+    <div id="blank"></div>
+    <h2>Emily Around the World</h2>
+  <div id="mapDiv" style="height:500px; width: auto">
+      
+    </div>
+    <div id="lets-connect" class="dark-gray">
+      <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </div>
+  <!--
+
+  The next line tells the browser where to download the JavaScript file you'll be
+  writing. In resumeBuilder.js, you'll be writing code that builds the resume
+  dynamically when this website, index.html, is opened.
+  -->
+  <script src="js/resume.js"></script>
+
+
+  <!--
+  These scripts are written in JavaScript. You'll be breaking them down as part of
+  a quiz. Essentially, the next few lines are checking to see if you have not
+  changed each section of the resume. If you have not made any changes to a section
+  of the resume, then that part of the resume does not show up. More on this in the
+  course.
+  -->
+
+ 
+</body>
+</html>
