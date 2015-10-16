@@ -93,6 +93,20 @@ var education = {
 			"dates" : "September - October 2015",
 			"url" : "www.udacity.com"
 		}
+	],
+	"courses" : [
+		{
+			"title" : "Francophone Cultural Immersion in Martinique",
+			"block" : 6,
+			"dates" : "February 2014",
+			"location" : "Fort de France, Martinique"
+		},
+		{
+			"title" : "Peninsular Culture and Civilization",
+			"block" : 7,
+			"dates" : "March-April 2014",
+			"location" : "Seville, Spain"
+		}
 	]
 
 }
@@ -184,8 +198,14 @@ education.display = function() {
 //Adds the googleMap to mapDiv, more info in helper.js
 $("#mapDiv").append(googleMap);
 
+//email, phone, github, location
+var formattedEmail2 = HTMLemail2.replace("%data%", bio.contacts.email);
+var formattedPhone2 = HTMLmobile2.replace("%data%", bio.contacts.phone);
+var formattedGithub2 = HTMLgithub2.replace("%data%", bio.contacts.github);
+var formattedLocation2 = HTMLlocation2.replace("%data%", bio.contacts.location);
+
 //Using vars from earlier, add to contacts to footer at the end
-$("#footerContacts").append(formattedPhone, formattedEmail, formattedGithub, formattedLocation);
+$("#footerContacts").append(formattedPhone2, formattedEmail2, formattedGithub2, formattedLocation2);
 
 
 

@@ -23,6 +23,15 @@ var HTMLgithub = '<li class="flex-item"><span class="highlight-color">github</sp
 var HTMLblog = '<li class="flex-item"><span class="highlight-color">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="highlight-color">location</span><span class="white-text">%data%</span></li>';
 
+var HTMLmobile2 = '<li class="flex-item"><span class="bottom-highlight">phone</span><span class="white-text">%data%</span></li>';
+var HTMLemail2 = '<li class="flex-item"><span class="bottom-highlight">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter2 = '<li class="flex-item"><span class="bottom-highlight">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub2 = '<li class="flex-item"><span class="bottom-highlight">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog2 = '<li class="flex-item"><span class="bottom-highlight">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation2 = '<li class="flex-item"><span class="bottom-highlight">location</span><span class="white-text">%data%</span></li>';
+
+
+
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
@@ -126,6 +135,11 @@ function initializeMap() {
     for (var school in education.schools) {
       locations.push(education.schools[school].location);
     }
+    // iterates through course locations and appends each location to
+    // the locations array
+    for (var course in education.courses) {
+      locations.push(education.courses[course].location);
+    }
 
     // iterates through work locations and appends each location to
     // the locations array
@@ -149,6 +163,11 @@ function initializeMap() {
     for (var school in education.schools) {
       locations.push(education.schools[school].locationInfo);
     }
+    // iterates through course locations and appends each location to
+    // the locations array
+    for (var course in education.courses) {
+      locations.push(education.courses[course].locationInfo);
+    }
 
     // iterates through work locations and appends each location to
     // the locations array
@@ -159,7 +178,7 @@ function initializeMap() {
     return locationInfos;
   }
 
-locationInfos = getLocationInfo();
+//locationInfos = getLocationInfo();
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
   placeData is the object returned from search results containing information
@@ -181,12 +200,13 @@ locationInfos = getLocationInfo();
     });
 
     //create contentString for all the content that will go into the infowindow
-    //var contentString = '<div id="mapinfo">' + '<p>This is the location'+name+'</p></div>';
-    var contentString = '<div id="mapContent">
+    var contentString = '<div id="mapinfo">' + '<p>This is the location'+name+'</p></div>';
+    /*var contentString = '<div id="mapContent">
         <h1>'+name+'</h1>
         <p> </p>
         <img src=""></img>
       </div>';
+    */
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
